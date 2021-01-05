@@ -1,5 +1,8 @@
 package es.uniovi.apuntesuniovi.model;
 
+/**
+ * Model to save alerts information
+ */
 public class SweetAlert {
 	private String title;
 	private String content;
@@ -19,5 +22,4 @@ public class SweetAlert {
 	public void setContent(String content) {
 		this.content = content;
 	}
-
 }

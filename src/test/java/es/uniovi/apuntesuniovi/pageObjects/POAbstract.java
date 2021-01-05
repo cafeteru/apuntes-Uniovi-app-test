@@ -2,7 +2,7 @@ package es.uniovi.apuntesuniovi.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-import es.uniovi.apuntesuniovi.TestUtil;
+import es.uniovi.apuntesuniovi.util.TestUtil;
 
 public abstract class POAbstract {
 	protected WebDriver driver;
