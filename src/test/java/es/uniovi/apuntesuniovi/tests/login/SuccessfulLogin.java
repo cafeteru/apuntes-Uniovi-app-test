@@ -25,5 +25,6 @@ public class SuccessfulLogin extends AbstractTest {
     @Then("the application will let him in")
     public void the_application_will_let_him_in() {
         testUtil.textPresent("Identificarse", false);
+        testUtil.textPresent("Cerrar sesión", true);
     }
 }

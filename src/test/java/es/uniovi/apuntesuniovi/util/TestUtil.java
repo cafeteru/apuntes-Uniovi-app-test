@@ -1,9 +1,6 @@
 package es.uniovi.apuntesuniovi.util;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import java.util.List;
 
@@ -28,8 +25,12 @@ public class TestUtil {
      * @param id Element id
      */
     public void changeWebClick(String id) {
-        driver.findElement(By.id(id)).click();
-        waitChangeWeb();
+        try {
+            driver.findElement(By.id(id)).click();
+            waitChangeWeb();
+        } catch (NoSuchElementException e) {
+            System.err.println("Not found element with id \"" + id + "\"");
+        }
     }
 
     /**
@@ -100,7 +101,7 @@ public class TestUtil {
             try {
                 driver.wait(seconds * 1000L);
             } catch (InterruptedException e) {
-                System.err.println("Error");
+                System.err.println("Error waitSeconds");
             }
         }
     }
