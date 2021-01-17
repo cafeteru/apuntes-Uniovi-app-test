@@ -1,4 +1,5 @@
 Feature: Logout
+
   Scenario: Successful logout
     Given User is identified
     When tries to logout

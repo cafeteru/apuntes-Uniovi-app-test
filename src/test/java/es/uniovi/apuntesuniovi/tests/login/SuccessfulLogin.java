@@ -13,7 +13,7 @@ public class SuccessfulLogin extends AbstractTest {
 
     @Given("User is not identified")
     public void user_is_not_identified() {
-        testUtil.changeWebUrl("http://localhost:4200/");
+        testUtil.changeWebUrl(baseUrl);
     }
 
     @When("tries to identify with correct params")
