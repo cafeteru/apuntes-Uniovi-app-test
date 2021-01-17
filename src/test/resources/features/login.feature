@@ -1,4 +1,5 @@
 Feature: Login
+
   Scenario: Successful login
     Given User is not identified
     When tries to identify with correct params

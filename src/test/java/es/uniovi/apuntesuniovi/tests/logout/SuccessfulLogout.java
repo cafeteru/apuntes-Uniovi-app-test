@@ -12,7 +12,7 @@ import io.cucumber.java.en.When;
 public class SuccessfulLogout extends AbstractTest {
     @Given("User is identified")
     public void user_is_identified() {
-        testUtil.changeWebUrl("http://localhost:4200/");
+        testUtil.changeWebUrl(baseUrl);
         POLogin login = new POLogin(driver, testUtil, "admin", "admin");
         login.run();
     }

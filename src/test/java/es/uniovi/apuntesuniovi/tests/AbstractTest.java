@@ -13,6 +13,7 @@ public abstract class AbstractTest {
     protected static WebDriver driver;
     protected static TestUtil testUtil;
     protected SweetAlert sweetAlert;
+    protected String baseUrl = "http://localhost:4200/";
 
     public AbstractTest() {
         driver = TestDriver.getDriver();
