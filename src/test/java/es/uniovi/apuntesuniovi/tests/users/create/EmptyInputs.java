@@ -1,26 +1,39 @@
 package es.uniovi.apuntesuniovi.tests.users.create;
 
+import es.uniovi.apuntesuniovi.pageObjects.users.POOpenModalUser;
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+
+import static org.junit.Assert.assertEquals;
 
 public class EmptyInputs extends AbstractTest {
+    @When("open the user modal")
+    public void open_the_user_modal() {
+        new POOpenModalUser(driver, testUtil).run();
+    }
+
     @When("tries to add a user without data")
     public void tries_to_add_a_user_without_data() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        testUtil.insertDataInput("username", "");
+        testUtil.insertDataInput("password", "");
+        driver.findElement(By.id("add")).click();
     }
 
     @Then("the application won´t let him add it")
     public void the_application_won_t_let_him_add_it() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        this.closeAndGetSweetAlert();
+        assertEquals("Error en el formulario", this.sweetAlert.getTitle());
+        assertEquals("Se han encontrado errores. Por favor, revíselo",
+                this.sweetAlert.getContent());
     }
 
     @Then("will show the errors of the required fields")
     public void will_show_the_errors_of_the_required_fields() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        testUtil.textPresent("El nombre de usuario es requerido", true);
+        testUtil.textPresent("La contraseña es requerida", true);
+        testUtil.textPresent("El rol es requerido", true);
     }
 
 }

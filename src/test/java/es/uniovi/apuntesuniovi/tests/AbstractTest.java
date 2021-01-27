@@ -24,6 +24,6 @@ public abstract class AbstractTest {
         sweetAlert = new SweetAlert();
         sweetAlert.setTitle(driver.findElement(By.id("swal2-title")).getText());
         sweetAlert.setContent(driver.findElement(By.id("swal2-content")).getText());
-        driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+        driver.findElement(By.className("swal2-confirm")).click();
     }
 }

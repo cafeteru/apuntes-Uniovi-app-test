@@ -1,7 +1,7 @@
 package es.uniovi.apuntesuniovi.tests.users.list;
 
 import es.uniovi.apuntesuniovi.pageObjects.users.POAdminMenuUsers;
-import es.uniovi.apuntesuniovi.pageObjects.POLogin;
+import es.uniovi.apuntesuniovi.pageObjects.login.POLogin;
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

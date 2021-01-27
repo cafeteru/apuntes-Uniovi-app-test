@@ -1,5 +1,6 @@
-package es.uniovi.apuntesuniovi.pageObjects;
+package es.uniovi.apuntesuniovi.pageObjects.login;
 
+import es.uniovi.apuntesuniovi.pageObjects.POAbstract;
 import es.uniovi.apuntesuniovi.util.TestUtil;
 import org.openqa.selenium.WebDriver;
 
