@@ -4,7 +4,8 @@ Feature: Create user
     Given User is identified as admin
     When tries to see the list of users
     And open the user modal
-    And tries to add a user without data
+    And add a user without data
+    And tries to save data
     Then the application won´t let him add it
     And will show the errors of the required fields
 
@@ -13,6 +14,7 @@ Feature: Create user
     When tries to see the list of users
     And open the user modal
     And tries to add a user with required data
+    And tries to save data
     Then the application will let him add it
 
   Scenario: Undefined role
@@ -21,6 +23,7 @@ Feature: Create user
     And open the user modal
     And tries to add a user with required data
     And does not specify the role
+    And tries to save data
     Then the application won´t let him add it
     And will show the errors of role fields
 

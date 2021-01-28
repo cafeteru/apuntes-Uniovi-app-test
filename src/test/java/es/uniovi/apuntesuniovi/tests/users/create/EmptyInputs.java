@@ -14,11 +14,16 @@ public class EmptyInputs extends AbstractTest {
         new POOpenModalUser(driver, testUtil).run();
     }
 
-    @When("tries to add a user without data")
+    @When("add a user without data")
     public void tries_to_add_a_user_without_data() {
         testUtil.insertDataInput("username", "");
         testUtil.insertDataInput("password", "");
+    }
+
+    @When("tries to save data")
+    public void tries_to_save_data() {
         driver.findElement(By.id("add")).click();
+        testUtil.waitChangeWeb();
     }
 
     @Then("the application won´t let him add it")

@@ -56,6 +56,12 @@ public class TestUtil {
         element.sendKeys(value);
     }
 
+    public void matSelectInput(String id, String value) {
+        WebElement element = getElementById(id);
+        element.click();
+        driver.findElement(By.id(value)).click();
+    }
+
     /**
      * Get a WebElement by id
      *
