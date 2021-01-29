@@ -13,23 +13,23 @@ import org.openqa.selenium.WebDriver;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = "es.uniovi.apuntesuniovi.tests",
-        monochrome = true,
-        plugin = {"pretty"}
+    features = "src/test/resources/features",
+    glue = "es.uniovi.apuntesuniovi.tests",
+    monochrome = true,
+    plugin = {"pretty"}
 )
 public class CucumberTest {
-    private static WebDriver driver;
+  private static WebDriver driver;
 
-    @BeforeClass
-    public static void setUp() {
-        driver = TestDriver.getDriver();
-    }
+  @BeforeClass
+  public static void setUp() {
+    driver = TestDriver.getDriver();
+  }
 
-    @AfterClass
-    public static void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+  @AfterClass
+  public static void tearDown() {
+    if (driver != null) {
+      driver.quit();
     }
+  }
 }

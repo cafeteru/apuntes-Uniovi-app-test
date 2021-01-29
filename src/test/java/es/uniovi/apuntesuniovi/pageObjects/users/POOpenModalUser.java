@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 
 public class POOpenModalUser extends POAbstract {
 
-    public POOpenModalUser(WebDriver driver, TestUtil testUtil) {
-        super(driver, testUtil);
-    }
+  public POOpenModalUser(WebDriver driver, TestUtil testUtil) {
+    super(driver, testUtil);
+  }
 
-    @Override
-    public void run() {
-        driver.findElement(By.id("addUser")).click();
-        testUtil.waitChangeWeb();
-    }
+  @Override
+  public void run() {
+    driver.findElement(By.id("addUser")).click();
+    testUtil.waitChangeWeb();
+  }
 }

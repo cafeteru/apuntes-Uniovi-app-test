@@ -120,7 +120,10 @@ Feature: Create user
     And open the user modal
     And tries to add a user with required data
     And tries to save data
-    Then the application won´t let him add it
+    And open the user modal
+    And tries add a user with the same username
+    And tries to save data
+    Then the server of the application won´t let him add it
     And will show the already register error of username
 
   Scenario: Number of identification already register
@@ -128,8 +131,11 @@ Feature: Create user
     When tries to see the list of users
     And open the user modal
     And tries to add a user with required data
-    And add NIE within the type of identification
-    And add valid NIE number of identification
+    And add DNI within the type of identification
+    And add valid DNI number of identification
     And tries to save data
-    Then the application won´t let him add it
+    And open the user modal
+    And tries add a user with the same number of identification
+    And tries to save data
+    Then the server of the application won´t let him add it
     And will show the already register error of number of identification

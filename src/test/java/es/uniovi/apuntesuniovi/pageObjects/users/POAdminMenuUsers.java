@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 
 public class POAdminMenuUsers extends POAbstract {
 
-    public POAdminMenuUsers(WebDriver driver, TestUtil testUtil) {
-        super(driver, testUtil);
-    }
+  public POAdminMenuUsers(WebDriver driver, TestUtil testUtil) {
+    super(driver, testUtil);
+  }
 
-    @Override
-    public void run() {
-        driver.findElement(By.linkText("Usuarios")).click();
-        testUtil.waitChangeWeb();
-    }
+  @Override
+  public void run() {
+    driver.findElement(By.linkText("Usuarios")).click();
+    testUtil.waitChangeWeb();
+  }
 }
