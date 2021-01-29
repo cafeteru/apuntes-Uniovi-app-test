@@ -1,4 +1,4 @@
-Feature: User-list
+Feature: User list
 
   Scenario: Successful load users
     Given User is identified as admin
