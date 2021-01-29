@@ -62,6 +62,11 @@ public class TestUtil {
         driver.findElement(By.id(value)).click();
     }
 
+    public void selectFile(String id, String url) {
+        WebElement elem = driver.findElement(By.id(id));
+        elem.sendKeys(url);
+    }
+
     /**
      * Get a WebElement by id
      *

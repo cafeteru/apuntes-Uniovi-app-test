@@ -7,13 +7,11 @@ import io.cucumber.java.en.When;
 public class InvalidPhone extends AbstractTest {
     @When("add a invalid phone")
     public void add_a_invalid_phone() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        testUtil.insertDataInput("phone", "145789123");
     }
 
     @Then("will show the invalid error of phone field")
     public void will_show_the_invalid_error_of_phone_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        testUtil.textPresent("El teléfono es inválido", true);
     }
 }

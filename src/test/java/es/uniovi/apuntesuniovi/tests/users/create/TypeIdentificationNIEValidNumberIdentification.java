@@ -6,7 +6,11 @@ import io.cucumber.java.en.When;
 public class TypeIdentificationNIEValidNumberIdentification extends AbstractTest {
     @When("add NIE within the type of identification")
     public void add_nie_within_the_type_of_identification() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        testUtil.matSelectInput("identificationType", "NIE");
+    }
+
+    @When("add valid NIE number of identification")
+    public void add_valid_NIE_number_of_identification() {
+        testUtil.insertDataInput("numberIdentification", "X2891145E");
     }
 }

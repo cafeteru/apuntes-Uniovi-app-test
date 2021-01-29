@@ -1,6 +1,6 @@
 package es.uniovi.apuntesuniovi.tests.users.create;
 
-import es.uniovi.apuntesuniovi.RandomMethods;
+import es.uniovi.apuntesuniovi.util.RandomMethods;
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

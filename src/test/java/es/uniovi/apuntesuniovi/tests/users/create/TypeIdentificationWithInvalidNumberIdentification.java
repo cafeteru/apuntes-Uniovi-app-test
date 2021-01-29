@@ -7,13 +7,11 @@ import io.cucumber.java.en.When;
 public class TypeIdentificationWithInvalidNumberIdentification extends AbstractTest {
     @When("add invalid number of identification")
     public void add_invalid_number_of_identification() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        testUtil.insertDataInput("numberIdentification", "X2891145");
     }
 
-    @Then("will show the invalid error of number of identification field")
-    public void will_show_the_invalid_error_of_number_of_identification_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("the application will show the invalid error of number of identification field")
+    public void the_application_will_show_the_invalid_error_of_number_of_identification_field() {
+        testUtil.textPresent("El formato del número de identificación es inválido", true);
     }
 }

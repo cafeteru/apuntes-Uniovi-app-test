@@ -1,4 +1,4 @@
-package es.uniovi.apuntesuniovi;
+package es.uniovi.apuntesuniovi.util;
 
 public class RandomMethods {
     public static Integer randomInteger(int min, int max) {
