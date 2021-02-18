@@ -67,6 +67,10 @@ public class TestUtil {
     elem.sendKeys(url);
   }
 
+  public void click(String id) {
+    driver.findElement(By.id(id)).click();
+  }
+
   /**
    * Get a WebElement by id
    *

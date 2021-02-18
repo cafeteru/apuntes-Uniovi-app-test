@@ -7,7 +7,10 @@ import java.io.IOException;
 import java.net.URL;
 
 public class GetFilesInternet {
+  private static final String folderName = "testFiles";
+
   public static void getFile(String url, String fileName) {
+    createFolder();
     try (BufferedInputStream inputStream = new BufferedInputStream(
         new URL(url).openStream());
          FileOutputStream fileOS = new FileOutputStream(getFolderFileUrl(fileName))) {
@@ -21,8 +24,18 @@ public class GetFilesInternet {
     }
   }
 
+  private static void createFolder() {
+    File file = new File(folderName);
+    if (file.exists()) {
+      return;
+    }
+    if (file.mkdir()) {
+      System.out.println("Carpeta " + folderName + " creada correctamente");
+    }
+  }
+
   public static String getFolderFileUrl(String fileName) {
-    return new File("testFiles/" + fileName).getAbsolutePath();
+    return new File(folderName + "/" + fileName).getAbsolutePath();
   }
 
   public static boolean delete(String url) {

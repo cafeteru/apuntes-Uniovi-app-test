@@ -18,9 +18,16 @@ public class RequiredInputs extends AbstractTest {
 
   @Then("the application will let him add it")
   public void the_application_will_let_him_add_it() {
-    // TODO Review when add pagination
     testUtil.waitChangeWeb();
     testUtil.textPresent(values.get("uo"), true);
+  }
+
+  @Then("apply username filter")
+  public void apply_username_filter() {
+    testUtil.waitChangeWeb();
+    testUtil.click("userFilters");
+    testUtil.insertDataInput("usernameFilter", values.get("uo"));
+    testUtil.click("filterButton");
   }
 
 }
