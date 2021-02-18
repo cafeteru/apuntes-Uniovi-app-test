@@ -30,7 +30,7 @@ public class GetFilesInternet {
       return;
     }
     if (file.mkdir()) {
-      System.out.println("Creada carpeta log correctamente");
+      System.out.println("Carpeta " + folderName + " creada correctamente");
     }
   }
 
