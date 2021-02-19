@@ -13,7 +13,8 @@ public class POAdminMenuUsers extends POAbstract {
 
   @Override
   public void run() {
-    driver.findElement(By.linkText("Usuarios")).click();
+    testUtil.click("openSidenav");
+    testUtil.click("usersNavList");
     testUtil.waitChangeWeb();
   }
 }
