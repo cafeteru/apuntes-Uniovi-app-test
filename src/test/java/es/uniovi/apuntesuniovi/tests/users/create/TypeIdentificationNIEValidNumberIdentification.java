@@ -1,6 +1,7 @@
 package es.uniovi.apuntesuniovi.tests.users.create;
 
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
+import es.uniovi.apuntesuniovi.util.RandomMethods;
 import io.cucumber.java.en.When;
 
 public class TypeIdentificationNIEValidNumberIdentification extends AbstractTest {
@@ -11,6 +12,6 @@ public class TypeIdentificationNIEValidNumberIdentification extends AbstractTest
 
   @When("add valid NIE number of identification")
   public void add_valid_NIE_number_of_identification() {
-    testUtil.insertDataInput("numberIdentification", "X2891145E");
+    testUtil.insertDataInput("numberIdentification", RandomMethods.nie());
   }
 }

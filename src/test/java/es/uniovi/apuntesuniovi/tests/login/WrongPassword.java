@@ -2,7 +2,6 @@ package es.uniovi.apuntesuniovi.tests.login;
 
 import es.uniovi.apuntesuniovi.pageObjects.login.POLogin;
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
-import es.uniovi.apuntesuniovi.util.TestDriver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
