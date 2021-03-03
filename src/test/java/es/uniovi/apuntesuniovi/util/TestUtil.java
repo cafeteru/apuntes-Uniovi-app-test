@@ -20,7 +20,7 @@ public class TestUtil {
   }
 
   /**
-   * Click a elemet to change the url of the explorer
+   * Click a element to change the url of the explorer
    *
    * @param id Element id
    */
@@ -56,17 +56,34 @@ public class TestUtil {
     element.sendKeys(value);
   }
 
+  /**
+   * Select a element of mat-select
+   *
+   * @param id    Id of mat-select
+   * @param value Selected value
+   */
   public void matSelectInput(String id, String value) {
     WebElement element = getElementById(id);
     element.click();
     driver.findElement(By.id(value)).click();
   }
 
+  /**
+   * Send a file into input
+   *
+   * @param id  Id of input
+   * @param url Url to file
+   */
   public void selectFile(String id, String url) {
     WebElement elem = driver.findElement(By.id(id));
     elem.sendKeys(url);
   }
 
+  /**
+   * Click the element
+   *
+   * @param id Id of element
+   */
   public void click(String id) {
     driver.findElement(By.id(id)).click();
   }
@@ -103,7 +120,7 @@ public class TestUtil {
    * Wait for the page to finish loading
    */
   public void waitChangeWeb() {
-    waitSeconds(1);
+    waitSeconds(2);
   }
 
   /**

@@ -18,7 +18,6 @@ public class TestDriver {
   private static Map<String, String> values;
   private static SweetAlert sweetAlert;
 
-
   /**
    * Get instance of Webdriver
    *
@@ -57,6 +56,12 @@ public class TestDriver {
     return values;
   }
 
+  /**
+   * Get a Singleton SweetAlert
+   *
+   * @return If SweetAlert doesn´t exist, it`ll return new one else return
+   * existed
+   */
   public static SweetAlert getSweetAlert() {
     if (sweetAlert == null) {
       sweetAlert = new SweetAlert();
@@ -64,9 +69,14 @@ public class TestDriver {
     return sweetAlert;
   }
 
+  /**
+   * Get content of SweetAlert into the object to check
+   */
   public static void closeAndGetSweetAlert() {
-    getSweetAlert().setTitle(getDriver().findElement(By.id("swal2-title")).getText());
-    getSweetAlert().setContent(getDriver().findElement(By.id("swal2-content")).getText());
+    getSweetAlert().setTitle(
+        getDriver().findElement(By.id("swal2-title")).getText());
+    getSweetAlert().setContent(
+        getDriver().findElement(By.id("swal2-content")).getText());
     getDriver().findElement(By.className("swal2-confirm")).click();
   }
 }
