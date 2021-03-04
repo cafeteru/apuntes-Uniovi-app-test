@@ -14,7 +14,6 @@ public class SuccessfulLoadUsers extends AbstractTest {
 
   @Given("User is identified as admin")
   public void user_is_identified_as_admin() {
-    testUtil.changeWebUrl(baseUrl);
     POLogin login = new POLogin(driver, testUtil, "admin", "admin");
     login.run();
   }

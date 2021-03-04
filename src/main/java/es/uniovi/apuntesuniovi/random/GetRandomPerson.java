@@ -29,11 +29,11 @@ public class GetRandomPerson {
       con.disconnect();
       return randomPersonList.getResults().get(0);
     } catch (MalformedURLException e) {
-      throw new IllegalArgumentException("MalformedURLException");
+      throw new IllegalArgumentException(e.getMessage());
     } catch (IOException e) {
-      throw new IllegalArgumentException("IOException");
+      throw new IllegalArgumentException(e.getMessage());
     } catch (NullPointerException e) {
-      throw new IllegalArgumentException("NullPointerException");
+      throw new IllegalArgumentException(e.getMessage());
     }
   }
 }

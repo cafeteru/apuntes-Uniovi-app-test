@@ -1,5 +1,6 @@
 package es.uniovi.apuntesuniovi.tests.login;
 
+import es.uniovi.apuntesuniovi.model.Constants;
 import es.uniovi.apuntesuniovi.pageObjects.login.POLogin;
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
 import io.cucumber.java.en.Given;
@@ -13,7 +14,7 @@ public class SuccessfulLogin extends AbstractTest {
 
   @Given("User is not identified")
   public void user_is_not_identified() {
-    testUtil.changeWebUrl(baseUrl);
+    testUtil.changeWebUrl(Constants.URL_BASE);
   }
 
   @When("tries to identify with correct params")

@@ -1,5 +1,6 @@
 package es.uniovi.apuntesuniovi.pageObjects.login;
 
+import es.uniovi.apuntesuniovi.model.Constants;
 import es.uniovi.apuntesuniovi.pageObjects.POAbstract;
 import es.uniovi.apuntesuniovi.util.TestUtil;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ public class POLogin extends POAbstract {
 
   @Override
   public void run() {
-    testUtil.changeWebUrl("http://localhost:4200/");
+    testUtil.changeWebUrl(Constants.URL_BASE);
     testUtil.insertDataInput("username", username);
     testUtil.insertDataInput("password", password);
     testUtil.changeWebClick("logIn");

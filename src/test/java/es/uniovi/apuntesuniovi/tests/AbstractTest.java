@@ -15,7 +15,6 @@ public abstract class AbstractTest {
   protected TestUtil testUtil;
   protected Map<String, String> values;
   protected SweetAlert sweetAlert;
-  protected String baseUrl = "http://localhost:4200/";
 
   public AbstractTest() {
     driver = TestDriver.getDriver();
