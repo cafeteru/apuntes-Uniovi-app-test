@@ -22,7 +22,7 @@ public class EmptyInputs extends AbstractTest {
 
   @When("tries to save data")
   public void tries_to_save_data() {
-    driver.findElement(By.id("add")).click();
+    testUtil.click("add");
     testUtil.waitChangeWeb();
   }
 
