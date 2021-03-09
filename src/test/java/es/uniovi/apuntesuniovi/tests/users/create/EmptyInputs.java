@@ -1,12 +1,11 @@
 package es.uniovi.apuntesuniovi.tests.users.create;
 
+import static org.junit.Assert.assertEquals;
+
 import es.uniovi.apuntesuniovi.pageObjects.users.POOpenModalUser;
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-
-import static org.junit.Assert.assertEquals;
 
 public class EmptyInputs extends AbstractTest {
   @When("open the user modal")
