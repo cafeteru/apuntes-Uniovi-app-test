@@ -15,6 +15,7 @@ public class EmptyInputs extends AbstractTest {
 
   @When("add a user without data")
   public void tries_to_add_a_user_without_data() {
+    testUtil.matSelectInput("role", "undefinedRole");
     testUtil.insertDataInput("username", "");
     testUtil.insertDataInput("password", "");
   }

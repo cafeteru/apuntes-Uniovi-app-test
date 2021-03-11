@@ -8,11 +8,12 @@ import es.uniovi.apuntesuniovi.util.GetFilesInternet;
 import es.uniovi.apuntesuniovi.util.RandomMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import java.time.format.DateTimeFormatter;
 
 public class UpdateDataWithoutRequired extends AbstractTest {
-  @And("add a user with all data")
+  @When("add a user with all data")
   public void add_a_user_with_all_data() {
     String uo = RandomMethods.randomUsername();
     values.put("uo", uo);

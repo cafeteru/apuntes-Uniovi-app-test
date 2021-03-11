@@ -26,7 +26,7 @@ public class TestUtil {
    */
   public void changeWebClick(String id) {
     try {
-      driver.findElement(By.id(id)).click();
+      click(id);
       waitChangeWeb();
     } catch (NoSuchElementException e) {
       System.err.println("Not found element with id \"" + id + "\"");
@@ -59,13 +59,12 @@ public class TestUtil {
   /**
    * Select a element of mat-select
    *
-   * @param id    Id of mat-select
-   * @param value Selected value
+   * @param id      Id of mat-select
+   * @param valueId Selected value
    */
-  public void matSelectInput(String id, String value) {
-    WebElement element = getElementById(id);
-    element.click();
-    driver.findElement(By.id(value)).click();
+  public void matSelectInput(String id, String valueId) {
+    click(id);
+    getElementById(valueId).click();
   }
 
   /**
@@ -75,8 +74,7 @@ public class TestUtil {
    * @param url Url to file
    */
   public void selectFile(String id, String url) {
-    WebElement elem = driver.findElement(By.id(id));
-    elem.sendKeys(url);
+    getElementById(id).sendKeys(url);
   }
 
   /**
@@ -85,7 +83,7 @@ public class TestUtil {
    * @param id Id of element
    */
   public void click(String id) {
-    driver.findElement(By.id(id)).click();
+    getElementById(id).click();
   }
 
   /**
