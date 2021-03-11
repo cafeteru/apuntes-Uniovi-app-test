@@ -68,6 +68,15 @@ public class TestUtil {
   }
 
   /**
+   * Change the value of a matSelect
+   *
+   * @param id Id of tag matSelect
+   */
+  public void matCheckBoxClick(String id) {
+    driver.findElement(By.xpath("//*[@id='" + id + "']/label")).click();
+  }
+
+  /**
    * Send a file into input
    *
    * @param id  Id of input
@@ -92,10 +101,14 @@ public class TestUtil {
    * @param id Element id
    * @return A Web element if exists
    */
-  private WebElement getElementById(String id) {
-    WebElement element = driver.findElement(By.id(id));
-    js.executeScript("arguments[0].scrollIntoView();", element);
-    return element;
+  public WebElement getElementById(String id) {
+    try {
+      WebElement element = driver.findElement(By.id(id));
+      js.executeScript("arguments[0].scrollIntoView();", element);
+      return element;
+    } catch (NoSuchElementException e) {
+      return null;
+    }
   }
 
   /**

@@ -6,7 +6,9 @@ Feature: Update user
     And open the user modal
     And add a user with all data
     And tries to save data
-    And apply username filter
+    And open filter menu
+    And insert username filter
+    And apply filters
     And view her data
     And open the user update modal
     And change user`s name
