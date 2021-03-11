@@ -15,7 +15,9 @@ Feature: Create user
     And open the user modal
     And tries to add a user with required data
     And tries to save data
-    Then apply username filter
+    Then open filter menu
+    And insert username filter
+    And apply filters
     And the application will let him add it
 
   Scenario: Undefined role
@@ -54,7 +56,9 @@ Feature: Create user
     And add DNI within the type of identification
     And add valid DNI number of identification
     And tries to save data
-    Then apply username filter
+    Then open filter menu
+    And insert username filter
+    And apply filters
     And the application will let him add it
 
   Scenario: Type of identification DNI with invalid letter number of identification
@@ -75,7 +79,9 @@ Feature: Create user
     And add NIE within the type of identification
     And add valid NIE number of identification
     And tries to save data
-    Then apply username filter
+    Then open filter menu
+    And insert username filter
+    And apply filters
     And the application will let him add it
 
   Scenario: Type of identification with valid number of identification but with another type
@@ -96,7 +102,9 @@ Feature: Create user
     And tries to add a user with required data
     And add a valid image
     And tries to save data
-    Then apply username filter
+    Then open filter menu
+    And insert username filter
+    And apply filters
     And the application will let him add it
 
   Scenario: Valid phone
@@ -106,7 +114,9 @@ Feature: Create user
     And tries to add a user with required data
     And add a valid phone
     And tries to save data
-    Then apply username filter
+    Then open filter menu
+    And insert username filter
+    And apply filters
     And the application will let him add it
 
   Scenario: Invalid phone

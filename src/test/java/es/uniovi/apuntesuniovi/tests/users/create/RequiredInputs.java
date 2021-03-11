@@ -2,6 +2,7 @@ package es.uniovi.apuntesuniovi.tests.users.create;
 
 import es.uniovi.apuntesuniovi.tests.AbstractTest;
 import es.uniovi.apuntesuniovi.util.RandomMethods;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -22,12 +23,19 @@ public class RequiredInputs extends AbstractTest {
     testUtil.textPresent((String) values.get("uo"), true);
   }
 
-  @Then("apply username filter")
-  public void apply_username_filter() {
+  @And("open filter menu")
+  public void open_filter_menu() {
     testUtil.waitChangeWeb();
     testUtil.click("userFilters");
-    testUtil.insertDataInput("usernameFilter", values.get("uo"));
-    testUtil.click("filterButton");
   }
 
+  @Then("insert username filter")
+  public void insert_username_filter() {
+    testUtil.insertDataInput("usernameFilter", values.get("uo"));
+  }
+
+  @And("apply filters")
+  public void apply_filters() {
+    testUtil.click("filterButton");
+  }
 }

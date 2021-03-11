@@ -7,7 +7,7 @@ public class Location {
   private String city;
   private String state;
   private String country;
-  private long postcode;
+  private String postcode;
   private Coordinates coordinates;
   private Timezone timezone;
 
@@ -52,12 +52,12 @@ public class Location {
   }
 
   @JsonProperty("postcode")
-  public long getPostcode() {
+  public String getPostcode() {
     return postcode;
   }
 
   @JsonProperty("postcode")
-  public void setPostcode(long value) {
+  public void setPostcode(String value) {
     this.postcode = value;
   }
 
