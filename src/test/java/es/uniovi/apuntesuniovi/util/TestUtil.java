@@ -112,6 +112,22 @@ public class TestUtil {
   }
 
   /**
+   * Get a WebElement by class
+   *
+   * @param className Element class
+   * @return A Web element if exists
+   */
+  public WebElement getElementByClass(String className) {
+    try {
+      WebElement element = driver.findElement(By.className(className));
+      js.executeScript("arguments[0].scrollIntoView();", element);
+      return element;
+    } catch (NoSuchElementException e) {
+      return null;
+    }
+  }
+
+  /**
    * Check if a text is present in the web
    *
    * @param text    Text to search
