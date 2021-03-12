@@ -19,6 +19,7 @@ public class InactiveActiveUser extends AbstractTest {
 
   @Then("the user disappeared in the list of users")
   public void the_user_disappeared_in_the_list_of_users() {
+    testUtil.waitChangeWeb();
     testUtil.textPresent(values.get("uo"), false);
   }
 }

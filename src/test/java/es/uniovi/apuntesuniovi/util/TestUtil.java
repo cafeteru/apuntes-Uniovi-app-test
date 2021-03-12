@@ -28,7 +28,7 @@ public class TestUtil {
     try {
       click(id);
       waitChangeWeb();
-    } catch (NoSuchElementException e) {
+    } catch (NoSuchElementException | NullPointerException e) {
       System.err.println("Not found element with id \"" + id + "\"");
     }
   }
@@ -104,6 +104,22 @@ public class TestUtil {
   public WebElement getElementById(String id) {
     try {
       WebElement element = driver.findElement(By.id(id));
+      js.executeScript("arguments[0].scrollIntoView();", element);
+      return element;
+    } catch (NoSuchElementException e) {
+      return null;
+    }
+  }
+
+  /**
+   * Get a WebElement by class
+   *
+   * @param className Element class
+   * @return A Web element if exists
+   */
+  public WebElement getElementByClass(String className) {
+    try {
+      WebElement element = driver.findElement(By.className(className));
       js.executeScript("arguments[0].scrollIntoView();", element);
       return element;
     } catch (NoSuchElementException e) {
