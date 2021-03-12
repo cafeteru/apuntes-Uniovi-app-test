@@ -31,6 +31,7 @@ public class RequiredInputs extends AbstractTest {
 
   @Then("insert username filter")
   public void insert_username_filter() {
+    testUtil.waitChangeWeb();
     testUtil.insertDataInput("usernameFilter", values.get("uo"));
   }
 

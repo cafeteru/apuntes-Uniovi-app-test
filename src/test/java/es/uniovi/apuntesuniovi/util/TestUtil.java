@@ -28,7 +28,7 @@ public class TestUtil {
     try {
       click(id);
       waitChangeWeb();
-    } catch (NoSuchElementException e) {
+    } catch (NoSuchElementException | NullPointerException e) {
       System.err.println("Not found element with id \"" + id + "\"");
     }
   }
