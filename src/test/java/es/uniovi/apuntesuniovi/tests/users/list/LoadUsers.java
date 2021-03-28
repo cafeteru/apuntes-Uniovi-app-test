@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 /**
  * Check the user list with correct data
  */
-public class SuccessfulLoadUsers extends AbstractTest {
+public class LoadUsers extends AbstractTest {
 
   @Given("User is identified as admin")
   public void user_is_identified_as_admin() {
