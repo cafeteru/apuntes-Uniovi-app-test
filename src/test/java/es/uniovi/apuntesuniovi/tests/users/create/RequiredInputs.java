@@ -20,7 +20,7 @@ public class RequiredInputs extends AbstractTest {
   @Then("the application will let him add it")
   public void the_application_will_let_him_add_it() {
     testUtil.waitChangeWeb();
-    testUtil.textPresent((String) values.get("uo"), true);
+    testUtil.textPresent(values.get("uo"), true);
   }
 
   @And("open filter menu")
