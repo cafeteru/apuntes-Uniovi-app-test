@@ -1,6 +1,6 @@
-Feature: Find subject by id
+Feature: Update subject
 
-  Scenario: Find subject by valid id
+  Scenario: Update with valid data
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal
@@ -10,4 +10,7 @@ Feature: Find subject by id
     And insert name filter
     And apply filters
     And open subject details
-    Then the application show subject´s data
+    And open the subject update modal
+    And change subject`s name
+    And tries to save data
+    Then subject´s data had changed
