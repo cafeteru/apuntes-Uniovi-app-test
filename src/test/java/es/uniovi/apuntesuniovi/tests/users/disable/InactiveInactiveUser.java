@@ -12,8 +12,8 @@ public class InactiveInactiveUser extends AbstractTest {
     testUtil.matCheckBoxClick("activeFilter");
   }
 
-  @Then("disable button does´nt exists")
-  public void disable_button_does_nt_exists() {
+  @Then("disable button doesn´t exists")
+  public void disable_button_doesn_t_exists() {
     Assert.assertNull(testUtil.getElementById("disable1"));
   }
 

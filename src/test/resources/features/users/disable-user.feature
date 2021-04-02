@@ -25,7 +25,7 @@ Feature: Disable user
     And click disable button
     And insert active filter
     And apply filters
-    Then disable button does´nt exists
+    Then disable button doesn´t exists
     And the user appeared in the list of users
 
   Scenario: Active a inactive user
@@ -52,5 +52,5 @@ Feature: Disable user
     And open filter menu
     And insert username filter
     And apply filters
-    Then enable button does´nt exists
+    Then enable button doesn´t exists
     And the user appeared in the list of users
