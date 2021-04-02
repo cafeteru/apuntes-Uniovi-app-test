@@ -10,7 +10,7 @@ Feature: Disable subject
     And insert name filter
     And apply filters
     And click disable button
-    Then the subject disappeared in the list of users
+    Then the subject disappeared in the list of subjects
 
   Scenario: Inactive a inactive user
     Given User is identified as admin
@@ -40,7 +40,7 @@ Feature: Disable subject
     And insert active filter
     And apply filters
     And click enable button
-    Then the subject disappeared in the list of users
+    Then the subject disappeared in the list of subjects
 
   Scenario: Active a active user
     Given User is identified as admin
