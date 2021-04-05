@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class EmptyInputs extends AbstractTest {
+
   @When("open the user modal")
   public void open_the_user_modal() {
     new POOpenModalUser(driver, testUtil).run();

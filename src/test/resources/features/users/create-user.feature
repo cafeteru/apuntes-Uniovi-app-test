@@ -133,7 +133,7 @@ Feature: Create user
     Given User is identified as admin
     When tries to see the list of users
     And open the user modal
-    And tries to add a user with required data
+    And add a user with all data
     And tries to save data
     And open the user modal
     And tries add a user with the same username
@@ -145,11 +145,12 @@ Feature: Create user
     Given User is identified as admin
     When tries to see the list of users
     And open the user modal
-    And tries to add a user with required data
+    And add a user with all data
     And add DNI within the type of identification
     And add valid DNI number of identification
     And tries to save data
     And open the user modal
+    And add a user with all data
     And tries add a user with the same number of identification
     And tries to save data
     Then the server of the application won´t let him add it
