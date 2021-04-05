@@ -12,6 +12,8 @@ public class UsernameAlreadyRegister extends AbstractTest {
   public void tries_add_a_user_with_the_same_username() {
     testUtil.insertDataInput("username", values.get("uo"));
     testUtil.insertDataInput("password", values.get("uo"));
+    testUtil.insertDataInput("name", values.get("uo"));
+    testUtil.insertDataInput("surname", values.get("uo"));
     testUtil.matSelectInput("role", "TEACHER");
   }
 

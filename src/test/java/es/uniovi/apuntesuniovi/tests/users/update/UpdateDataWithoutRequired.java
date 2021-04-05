@@ -26,6 +26,7 @@ public class UpdateDataWithoutRequired extends AbstractTest {
         DateTimeFormatter.ofPattern("dd/MM/yyyy")));
     testUtil.insertDataInput("surname", person.getName().getLast());
     testUtil.insertDataInput("name", person.getName().getFirst());
+    values.put("name", person.getName().getFirst());
     testUtil.insertDataInput("email", person.getEmail());
     testUtil.insertDataInput("phone", "" + RandomMethods.randomInteger(600_000_000, 699_999_999));
     testUtil.insertDataInput("street", person.getLocation().getStreet().getName());

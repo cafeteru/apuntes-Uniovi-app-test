@@ -14,6 +14,8 @@ public class NumberIdentificationAlreadyRegister extends AbstractTest {
     values.put("uo", uo);
     testUtil.insertDataInput("username", uo);
     testUtil.insertDataInput("password", uo);
+    testUtil.insertDataInput("name", uo);
+    testUtil.insertDataInput("surname", uo);
     testUtil.matSelectInput("role", "ADMIN");
     testUtil.matSelectInput("identificationType", "DNI");
     testUtil.insertDataInput("numberIdentification", values.get("dni"));
