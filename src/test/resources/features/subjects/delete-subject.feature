@@ -1,6 +1,6 @@
 Feature: Delete subject
 
-  Scenario: Confirm delete a user
+  Scenario: Confirm delete a subject
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal
@@ -13,7 +13,7 @@ Feature: Delete subject
     And confirm sweet alert
     Then the subject disappeared in the list of subjects
 
-  Scenario: Cancel delete a user
+  Scenario: Cancel delete a subject
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal

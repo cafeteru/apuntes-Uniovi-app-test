@@ -1,6 +1,6 @@
 Feature: Disable subject
 
-  Scenario: Inactive a active user
+  Scenario: Inactive a active subject
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal
@@ -12,7 +12,7 @@ Feature: Disable subject
     And click disable button
     Then the subject disappeared in the list of subjects
 
-  Scenario: Inactive a inactive user
+  Scenario: Inactive a inactive subject
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal
@@ -22,12 +22,13 @@ Feature: Disable subject
     And insert name filter
     And apply filters
     And click disable button
+    And insert name filter
     And insert active filter
     And apply filters
     Then disable button doesn´t exists
     And the subject will be in the list
 
-  Scenario: Active a inactive user
+  Scenario: Active a inactive subject
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal
@@ -37,12 +38,13 @@ Feature: Disable subject
     And insert name filter
     And apply filters
     And click disable button
+    And insert name filter
     And insert active filter
     And apply filters
     And click enable button
     Then the subject disappeared in the list of subjects
 
-  Scenario: Active a active user
+  Scenario: Active a active subject
     Given User is identified as admin
     When tries to see the list of subjects
     And open the subject modal
