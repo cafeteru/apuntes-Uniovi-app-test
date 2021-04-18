@@ -8,7 +8,7 @@ public class CreateSubjectWithTeacher extends AbstractTest {
 
   @And("assign teacher role")
   public void assign_teacher_role() {
-    testUtil.matSelectInput("role", "TEACHER");
+    testUtil.matSelectInput("role", "ROLE_TEACHER");
   }
 
   @And("add a teacher")

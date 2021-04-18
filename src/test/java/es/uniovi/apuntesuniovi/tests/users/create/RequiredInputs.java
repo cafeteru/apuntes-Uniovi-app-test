@@ -16,7 +16,7 @@ public class RequiredInputs extends AbstractTest {
     testUtil.insertDataInput("password", uo);
     testUtil.insertDataInput("name", uo);
     testUtil.insertDataInput("surname", uo);
-    testUtil.matSelectInput("role", "STUDENT");
+    testUtil.matSelectInput("role", "ROLE_STUDENT");
   }
 
   @Then("the application will let him add it")

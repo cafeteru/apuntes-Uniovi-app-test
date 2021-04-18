@@ -19,7 +19,7 @@ public class UpdateDataWithoutRequired extends AbstractTest {
     values.put("uo", uo);
     testUtil.insertDataInput("username", uo);
     testUtil.insertDataInput("password", uo);
-    testUtil.matSelectInput("role", "STUDENT");
+    testUtil.matSelectInput("role", "ROLE_STUDENT");
     Person person = GetRandomPerson.getPerson();
     values.put("person", new Gson().toJson(person));
     testUtil.insertDataInput("birthDate", person.getDob().getDate().format(

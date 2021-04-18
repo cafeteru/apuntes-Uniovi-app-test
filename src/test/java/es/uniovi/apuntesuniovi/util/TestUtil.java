@@ -147,7 +147,7 @@ public class TestUtil {
    * Wait for the page to finish loading
    */
   public void waitChangeWeb() {
-    waitSeconds(2);
+    waitSeconds(1);
   }
 
   /**

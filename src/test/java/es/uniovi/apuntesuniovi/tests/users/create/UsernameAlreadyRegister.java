@@ -14,7 +14,7 @@ public class UsernameAlreadyRegister extends AbstractTest {
     testUtil.insertDataInput("password", values.get("uo"));
     testUtil.insertDataInput("name", values.get("uo"));
     testUtil.insertDataInput("surname", values.get("uo"));
-    testUtil.matSelectInput("role", "TEACHER");
+    testUtil.matSelectInput("role", "ROLE_TEACHER");
   }
 
   @Then("the server of the application won´t let him add it")
