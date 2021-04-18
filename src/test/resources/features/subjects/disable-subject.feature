@@ -42,6 +42,9 @@ Feature: Disable subject
     And insert active filter
     And apply filters
     And click enable button
+    And insert name filter
+    And insert active filter
+    And apply filters
     Then the subject disappeared in the list of subjects
 
   Scenario: Active a active subject

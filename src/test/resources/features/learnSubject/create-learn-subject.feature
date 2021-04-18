@@ -1,6 +1,6 @@
-Feature: Create teach subject
+Feature: Create learn subject
 
-  Scenario: Create a subject with a teacher
+  Scenario: Create a subject with a student
     Given User is identified as admin
     When tries to see the list of users
     And open the user modal
