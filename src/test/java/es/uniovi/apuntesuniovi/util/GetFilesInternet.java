@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.URL;
 
 public class GetFilesInternet {
-  private static final String folderName = "testFiles";
+  private static final String folderName = "target/testFiles";
 
   public static void getFile(String url, String fileName) {
     createFolder();
