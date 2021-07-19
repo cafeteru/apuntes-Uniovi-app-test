@@ -1,13 +1,14 @@
 package es.uniovi.apuntesuniovi.util;
 
-import es.uniovi.apuntesuniovi.model.SweetAlert;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.HashMap;
-import java.util.Map;
+import es.uniovi.apuntesuniovi.model.SweetAlert;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Class to create a instance of Google Chrome
@@ -64,7 +65,7 @@ public class TestDriver {
    */
   public static SweetAlert getSweetAlert() {
     if (sweetAlert == null) {
-      sweetAlert = new SweetAlert();
+      sweetAlert = SweetAlert.builder().build();
     }
     return sweetAlert;
   }

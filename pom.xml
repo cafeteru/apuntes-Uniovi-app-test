@@ -16,9 +16,11 @@
     <description>Final degree project to improve the use of the Uniovi virtual campus</description>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
         <cucumber.version>6.9.1</cucumber.version>
+        <java.version>11</java.version>
+        <lombok.version>1.18.20</lombok.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <webdrivermanager.version>4.2.2</webdrivermanager.version>
     </properties>
 
     <dependencies>
@@ -29,7 +31,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>4.2.2</version>
+            <version>${webdrivermanager.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -63,6 +65,12 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>${lombok.version}</scope>
         </dependency>
     </dependencies>
 
