@@ -1,30 +1,14 @@
 package es.uniovi.apuntesuniovi.model;
 
+import lombok.Builder;
+import lombok.Data;
+
 /**
  * Model to save alerts information
  */
+@Data
+@Builder
 public class SweetAlert {
   private String title;
   private String content;
-
-  public SweetAlert() {
-    title = "";
-    content = "";
-  }
-
-  public String getTitle() {
-    return title;
-  }
-
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-  public String getContent() {
-    return content;
-  }
-
-  public void setContent(String content) {
-    this.content = content;
-  }
 }
