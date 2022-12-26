@@ -6,21 +6,19 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.10.RELEASE</version>
+        <version>2.7.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>es.uniovi</groupId>
     <artifactId>apuntes-Uniovi-app-test</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>apuntes-Uniovi-app-test</name>
     <description>Final degree project to improve the use of the Uniovi virtual campus</description>
 
     <properties>
-        <cucumber.version>6.9.1</cucumber.version>
+        <cucumber.version>7.10.1</cucumber.version>
         <java.version>11</java.version>
-        <lombok.version>1.18.20</lombok.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <webdrivermanager.version>4.2.2</webdrivermanager.version>
     </properties>
 
     <dependencies>
@@ -31,7 +29,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
+            <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -69,7 +67,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -85,9 +83,9 @@
 
     <developers>
         <developer>
-            <id>igm1990</id>
+            <id>cafeteru</id>
             <name>Iván González Mahagamage</name>
-            <email>ivangonzalezmahagamge@gmail.com</email>
+            <email>cafeteru.dev@gmail.com</email>
             <roles>
                 <role>Developer</role>
             </roles>

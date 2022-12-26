@@ -57,7 +57,7 @@ public class TestUtil {
   }
 
   /**
-   * Select a element of mat-select
+   * Select an element of mat-select
    *
    * @param id      Id of mat-select
    * @param valueId Selected value
